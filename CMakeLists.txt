@@ -18,7 +18,6 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
 add_library(npc_lib
-    src/NPC.cpp
     src/Squirrel.cpp
     src/Druid.cpp
     src/Werewolf.cpp
@@ -28,8 +27,6 @@ target_include_directories(npc_lib PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 add_library(patterns_lib 
   src/NPC_Factory.cpp
-  src/Observer.cpp
-  src/Visitor.cpp
   src/Game.cpp
 )
 target_include_directories(patterns_lib PUBLIC ${PROJECT_SOURCE_DIR}/include)
